@@ -20,7 +20,7 @@ def main():
 
     while start_date <= end_date:
         match start_date.weekday():
-            case 1 | 2 | 3:  # Tue | Wed | Thu
+            case 1 | 3:  # Tue | Thu
                 post_time = datetime(
                     start_date.year, 
                     start_date.month, 
