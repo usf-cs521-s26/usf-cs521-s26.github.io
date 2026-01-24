@@ -1,0 +1,48 @@
+current directory: /home/phil/courses/cs521/s26/site/.gems/ruby/3.3.0/gems/ffi-1.17.1/ext/ffi_c
+/nix/store/l4ksh9h3278v5grh0vc9b1h7jc29p4rv-ruby-3.3.10/bin/ruby extconf.rb
+checking for pkg-config for libffi... ["-I/nix/store/9pvv6nip8hbk19ca24wmncjir9pv8vas-libffi-3.5.2-dev/include ", "-L/nix/store/b9p0zpa93hwvh4d0r1rmgc2500yx2ldn-libffi-3.5.2/lib/../lib64", "-lffi"]
+checking for ffi_prep_closure_loc() in -lffi... yes
+checking for ffi_prep_cif_var()... yes
+checking for ffi_raw_call()... yes
+checking for ffi_prep_raw_closure()... yes
+checking for rb_gc_mark_movable()... yes
+checking for whether -pthread is accepted as LDFLAGS... yes
+creating extconf.h
+creating Makefile
+
+current directory: /home/phil/courses/cs521/s26/site/.gems/ruby/3.3.0/gems/ffi-1.17.1/ext/ffi_c
+make DESTDIR\= sitearchdir\=./.gem.20260124-27236-sv4px4 sitelibdir\=./.gem.20260124-27236-sv4px4 clean
+
+current directory: /home/phil/courses/cs521/s26/site/.gems/ruby/3.3.0/gems/ffi-1.17.1/ext/ffi_c
+make DESTDIR\= sitearchdir\=./.gem.20260124-27236-sv4px4 sitelibdir\=./.gem.20260124-27236-sv4px4
+compiling AbstractMemory.c
+compiling ArrayType.c
+compiling Buffer.c
+compiling Call.c
+compiling ClosurePool.c
+compiling DynamicLibrary.c
+compiling Function.c
+compiling FunctionInfo.c
+compiling LastError.c
+compiling LongDouble.c
+compiling MappedType.c
+compiling MemoryPointer.c
+compiling MethodHandle.c
+compiling Platform.c
+compiling Pointer.c
+compiling Struct.c
+compiling StructByValue.c
+compiling StructLayout.c
+compiling Thread.c
+compiling Type.c
+compiling Types.c
+compiling Variadic.c
+compiling ffi.c
+linking shared-object ffi_c.so
+
+current directory: /home/phil/courses/cs521/s26/site/.gems/ruby/3.3.0/gems/ffi-1.17.1/ext/ffi_c
+make DESTDIR\= sitearchdir\=./.gem.20260124-27236-sv4px4 sitelibdir\=./.gem.20260124-27236-sv4px4 install
+install -c -p -m 755 ffi_c.so ./.gem.20260124-27236-sv4px4
+
+current directory: /home/phil/courses/cs521/s26/site/.gems/ruby/3.3.0/gems/ffi-1.17.1/ext/ffi_c
+make DESTDIR\= sitearchdir\=./.gem.20260124-27236-sv4px4 sitelibdir\=./.gem.20260124-27236-sv4px4 clean

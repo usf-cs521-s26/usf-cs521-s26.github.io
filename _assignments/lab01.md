@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-01-29 11:59:59 -0800
 permalink: assignments/lab01.html
 title: Lab01 - Environment Setup
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/5t9F5B9q
+published: true
 ---
 
 ## Background
@@ -30,7 +30,7 @@ published: false
 1. Once you're on `medusa`, run the command `clab` to launch a Docker container where you can do work
 1. Clone the assignment repository ("repo") into your home directory
     ```sh
-    YOUR_USF_USERNAME@d122079067b8:~ $ git clone git@github.com:/cs521-s24/lab01-YOUR_GITHUB_USERNAME
+    YOUR_USF_USERNAME@d122079067b8:~ $ git clone git@github.com:/cs521-s26/lab01-YOUR_GITHUB_USERNAME
     YOUR_USF_USERNAME@d122079067b8:~ cd lab01-YOUR_GITHUB_USERNAME
     ```
 1. Compile the program
