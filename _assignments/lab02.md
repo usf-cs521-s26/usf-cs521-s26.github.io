@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-02-09 23:59:59 -0800
 permalink: assignments/lab02.html
 title: Lab02 - Strings
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/wR4ku1xF
+published: true
 ---
 
 ## Requirements
@@ -13,8 +13,8 @@ called `lab02` (case sensitive) for the parts described below
 1. You will use the `grade` script to test your results
 
 ## Given
-1. You must clone my [autograder repo](https://github.com/phpeterson-usf/autograder) 
-and the [test cases repo](https://github.com/cs521-f24/tests) for this class 
+1. You must install my [autograder tool](https://github.com/phpeterson-usf/autograder) 
+and the [test cases repo](https://github.com/usf-cs521-s26/tests) for this class 
 into your home directory on the lab systems
 1. The `make` program is included on the lab systems so you do not have to 
 install it
@@ -40,7 +40,9 @@ $ ./lab02 abbabb bb
 $ ./lab02 abbabb bc
 0
 ```
-You may use the C library function `strstr()` if you wish. `char *strstr(char *a, char *b)` returns a pointer to the first occurrence of `b` if `b` occurs in `a`, or `NULL` if `b` does not occur in `a`
+
+The C library function `strstr(char *a, char *b)` returns a pointer to the first occurrence of `b` in `a`, or NULL if `b` does not occur in `a`. You must implement this lab yourself, without using `strstr()`
+
 
 ## Rubric
 1. 100 pts as shown by the autograder script
