@@ -14,7 +14,7 @@ called `lab02` (case sensitive) for the parts described below
 
 ## Given
 1. You must install my [autograder tool](https://github.com/phpeterson-usf/autograder) 
-and the [test cases repo](https://github.com/cs521-f24/tests) for this class 
+and the [test cases repo](https://github.com/usf-cs521-s26/tests) for this class 
 into your home directory on the lab systems
 1. The `make` program is included on the lab systems so you do not have to 
 install it
