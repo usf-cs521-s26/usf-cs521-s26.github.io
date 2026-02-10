@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-23:59:59 -0800
 permalink: assignments/project01.html
 title: Project01 - Password Analyzer
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/IrUxpA0n
+published: true
 ---
 
 ## Background
