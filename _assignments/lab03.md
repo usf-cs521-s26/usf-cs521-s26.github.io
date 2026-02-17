@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-02-23 23:59:59 -0800
 permalink: assignments/lab03.html
 title: Lab03 - Files, struct
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/GCI3h-A-
+published: true
 ---
 
 ## Background
