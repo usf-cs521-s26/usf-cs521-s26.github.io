@@ -1,6 +1,6 @@
 ---
 layout: assignment
-due: 2026-03-02 23:59:59 -0800
+due: 2026-03-03 23:59:59 -0800
 permalink: assignments/project02.html
 title: Project02 - File Find utility
 github_url: https://classroom.github.com/a/mPuhywuE
