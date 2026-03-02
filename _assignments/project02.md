@@ -51,9 +51,8 @@ In order to make the project auto-gradable, a few design decisions have been mad
 
 1. 80 pts - correctness as shown by the autograder
 1. 20 pts - interactive grading
-    1. You must attend a 1:1 interactive grading meeting with the instructor or TA to get
-    credit for the project. No partial credit is available for code without a meeting.
-    1. We will meet during the first lecture time slot after the due date
-    1. Be prepared to show your solution in a terminal editor (`micro`, `vim`, etc.) in a `clab` container. VS Code, Sublime, web browsers, etc. are not acceptable
-    1. Be prepared to explain how your solution works, including correct use of the given material.
-    1. Interactive grading includes [coding style](https://github.com/usfca-cs-tools/docs/blob/main/c-style.md)
+    1. Option 1: Hand in LLM code. No code review. 5 points
+    1. Option 2: Write it yourself. Schedule a code review. Up to 20 points. 
+        1. Be prepared to show your solution in a terminal editor (`micro`, `vim`, etc.) in a `clab` container. VS Code, Sublime, web browsers, etc. are not acceptable
+        1. Be prepared to explain how your solution works, including correct use of the given material.
+        1. Code review includes [coding style](https://github.com/usfca-cs-tools/docs/blob/main/c-style.md)
