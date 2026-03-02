@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-03-10 23:59:59 -0700
 permalink: assignments/lab04.html
 title: Lab04 - Lexical Analysis
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/kUlu-EjN
+published: true
 ---
 
 ## Background
