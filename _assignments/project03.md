@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-03-10 23:59:59 -0700
 permalink: assignments/project03.html
 title: Project03 - Elastic Array, File Stat
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/ST3AnIyx
+published: true
 ---
 
 ## Requirements
