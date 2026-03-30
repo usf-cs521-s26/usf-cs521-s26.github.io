@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-04-08 23:59:59
 permalink: assignments/project04.html
 title: Project04 - Expression Interpreter
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/edhQ5dWa
+published: true
 ---
 
 ## Requirements
@@ -71,7 +71,7 @@ $ ./project04 -b 2 -e "(0xF << 0x4) + 1"
 
 ## Rubric
 1. 80 pts: automated tests
-1. 20 pts: interactive grading for neatness and correctness
+1. 20 pts: code review for neatness and correctness
 1. 5 pts: extra credit. 
     1. Add support for variables and `print(data, base)` functions using the following EBNF
         ```text
