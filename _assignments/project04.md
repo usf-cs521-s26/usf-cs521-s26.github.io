@@ -21,7 +21,7 @@ published: true
     ```
     tokenlist  = (token)*
     token      = intlit | hexlit | binlit | symbol
-    symbol     = '+' | '-' | '*' | '/' | '>>' | '<<' | '~' | '&' | '|' | '^'
+    symbol     = '+' | '-' | '*' | '/' | '>>' | '>-' | '<<' | '~' | '&' | '|' | '^'
     intlit     = digit (digit)*
     hexlit     = '0x' | hexdigit (hexdigit)*
     binlit     = '0b' ['0', '1'] (['0', '1'])*
