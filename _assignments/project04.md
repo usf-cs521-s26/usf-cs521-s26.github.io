@@ -71,5 +71,5 @@ $ ./project04 -b 2 -e "(0xF << 0x4) + 1"
 
 ## Rubric
 1. 80 pts: automated tests
-1. 20 pts: code review for neatness and correctness
+1. 20 pts: code review for original code: neatness and correctness OR 5 pts for LLM code
 1. 5 pts: extra credit. Write it in Rust. Use [Prof. Benson's slides](https://cs631-s26.cs.usfca.edu/) as a guide
