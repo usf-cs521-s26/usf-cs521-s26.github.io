@@ -13,7 +13,8 @@ published: true
 1. You will add support for new language elements as shown in the EBNF below. Bitwise operators in C are explained [here](https://www.tutorialspoint.com/cprogramming/c_bitwise_operators.htm).
 1. You will add an evaluation (interpretation) stage to our little language. Your interpreter will walk the parse tree (AST) depth-first, evaluating the expressions defined by the nodes. 
 1. You will print the expression's value in base 2, base 10, or base 16, using the `-b` flag in command line input.
-1. `-e` and `-b` flags may be given in any order. (See examples below)
+1. When printing output in decimal, the `-u` flag means to print as an unsigned decimal number (using `%u`). If `-u` is not present, you should print in signed decimal number (`%d`).
+1. Command line flags may be given in any order. (See examples below)
 1. All numbers are assumed to be 32 bits wide, so your output for base 2 and base 16 numbers should include leading zeros.
 
 ## EBNF Enhancements
@@ -56,6 +57,10 @@ $ ./project04 -b 10 -e "(2 * (0b1111 & 0b1010))"
 20
 $ ./project04 -b 2 -e "(0xF << 0x4) + 1"
 0b00000000000000000000000011110001
+$ ./project04 -u -b 10 -e "0-1"
+4294967295
+$ ./project04 -b 10 -e "0-1"
+-1
 ```
 
 ## Debugging Tips
