@@ -96,7 +96,7 @@ $ pkill -x lab06
 	that means your server is still bound to the port and you need to kill it.
 	```sh
 	$ ps ax |grep lab06
-	14280 pts/0    S      0:00 ./lab06 -p 9000
+	14280 pts/0    S      0:00 ./lab06 -p 8000
 	14283 pts/0    S+     0:00 grep --color=auto lab06
 	$ kill 14280
 	```
