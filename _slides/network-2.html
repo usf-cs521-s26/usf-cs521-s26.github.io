@@ -61,6 +61,9 @@ if (r == NULL) {               // no address succeeded
 ---
 ## Bind the socket to an address
 ```c
+struct sockaddr_in *ai = (struct sockaddr_in*) r->ai_addr;
+ai->sin_port = htons(atoi(port));
+ai->sin_addr.s_addr = INADDR_ANY;
 bind(fd, r->ai_addr, r->ai_addrlen);
 ```
 
