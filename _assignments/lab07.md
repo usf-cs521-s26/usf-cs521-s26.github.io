@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-04-21 23:59:59 -0700
 permalink: assignments/lab07.html
 title: lab07 - HTTP server part 2
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/-fccj3xp
+published: true
 ---
 
 ## Requirements

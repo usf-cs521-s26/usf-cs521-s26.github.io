@@ -101,10 +101,18 @@ $ pkill -x lab06
 	$ kill 14280
 	```
 
+## Connection Steps
+
+1. Develop and debug your server on a `clab` container as usual. For consistency, use port 8000.
+2. Use `ip a` to learn the container's IPv4 address. It will start with `172.17.0`
+3. Open a new terminal tab or window and create an ssh tunnel like this:
+
+    `ssh -J stargate -L 8000:172.17.0.7:8000 your_usf_username@medusa`
+4. Open another new terminal tab or window and telnet to your server
+
+    `telnet localhost 8000`
+
 ## Rubric
 
-1. Autograder contains one test case, using a [shell script](https://github.com/cs521-s24/tests/blob/main/lab06/test.sh) which runs your server in the background and telnets to it on your port.
-	```sh
-	$ grade test -p lab06
-	. pong(100/100) 100/100
-	```
+1. Since the SSH tunnel doesn't integrate nicely with autograder, we will grade the socket labs and project by hand.
+2. For this assignment, we will test the tunnel and PING/PONG steps as shown here.
