@@ -1,0 +1,285 @@
+---
+title: Relational DBs
+layout: raw
+---
+
+<br>
+<br>
+<br>
+
+# Databases
+
+---
+
+## Problem statement
+
+1. Since the index for a useful search engine is too large to fit in RAM
+we have to write it onto a disk (or a lot of disks) 
+1. We need a way to query the index and get results 
+1. Use a database! 
+
+---
+
+## Flavors 
+
+The universe of databases is divided into approaches:
+
+1. Relational Databases use _Tables_ where each row is an entry 
+and each column is an attribute of that entry. 
+1. Non-Relational databases, where _Documents_ contain _Attributes_ 
+
+---
+
+## Relational DBs
+
+1. Rely on a Schema which contains rules about which tables can contain which attributes 
+1. <a href=https://en.wikipedia.org/wiki/Referential_integrity target="_blank">Referential Integrity</a> enforces 
+the relationships defined in the schema 
+1. We can create, update (modify) and delete elements of a table, as long as 
+the changes obey the rules specified in the schema 
+1. Can you imagine some pros or cons? 
+
+---
+
+## Document DBs
+
+1. If your data isn't relational, perhaps the rigidity of a relational DB isn't helpful
+1. Maybe it's not important that all documents contain the same attributes
+1. Imagine a database which indexes <a href=https://en.wikipedia.org/wiki/JSON target="_blank">JSON</a> documents
+1. How might our search engine use a Document DB?
+
+---
+
+## Scalability
+
+1. If you're building a search engine for a company, **vertical scalability** 
+(bigger disk, faster computer) might be enough 
+1. If you're building a global-scale search engine, **horizontal scalability**
+(more computers, more disks) will be required 
+
+---
+
+## ACID Transactions 
+
+1. Atomicity - if a transaction starts, it finishes 
+1. Consistency - all computers contain the same data 
+1. Isolation - concurrent and sequential results match 
+1. Durability - transaction results are permanent 
+
+Proposed by  [Jim Gray](https://en.wikipedia.org/wiki/Jim_Gray_(computer_scientist)) 
+
+---
+
+## Pro Tip
+
+1. Yes, relational DBs can be a drag, but 
+1. The stronger your ACID requirements are, the more you need a relational DB 
+1. Choose the right tool for the job 
+
+---
+
+## CS 272
+
+1. We will use a relational DB for this course, even though a search 
+engine is not a classically relational problem 
+1. Hopefully the exposure will be valuable 
+
+---
+<br>
+<br>
+<br>
+
+# Relational Modeling
+
+proposed by [Ted Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd)
+---
+
+## Entities
+
+1. Entities are the tables in a database
+1. Programmers tend to make complex data structures
+1. Simplify each struct into an entity, unrolling lists/slices, maps, etc.
+
+---
+
+## Object-oriented view
+
+```go
+type Product struct {
+    product_name string
+    unit_price float
+}
+
+type Manufacturer struct {
+    mfg_name string
+    products []Product
+}
+```
+
+---
+
+## Relational view 1
+
+| mfg_name    |
+| ----------- |
+| Widgets Inc |
+
+| product_name | unit_price |
+| ------------ | ---------- |
+| Sprocket     |       9.99 |
+| Gadget       |      14.99 |
+
+Problems?
+
+---
+
+## Relationships
+
+Relationships describe how entities interact
+- Has One
+- Has Many
+- Unique
+- Non-null
+- "Has Birthdate"
+
+What problem do these solve?
+
+---
+
+## Relational view 2
+
+| id | mfg_name    |
+| -- | ----------- |
+|  1 | Widgets Inc |
+
+| id | mfg_id | product_name | unit_price |
+| -- | ------ | ------------ | ---------- |
+|  1 |      1 | Sprocket     |       9.99 |
+|  2 |      1 | Gadget       |      14.99 |
+
+--- 
+
+## Entity Relationships 
+
+1. ER diagrams help define a schema 
+1. Always start a project with an ER diagram 
+1. How might our search engine use ER diagram? 
+
+<a href=https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model target="_blank">Proposed by Peter Chen</a>  
+
+---
+
+## Cardinality
+
+1. Refers to the number of relationships between one entity and another 
+1. Drawn using  [crow's foot notation](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model#Crow's_foot_notation) 
+1. How might our search engine use cardinality? 
+
+---
+
+## Principles
+
+1. Unroll data structures into one table per struct type 
+1. Every row has a  _Primary Key_  which is unique in that table 
+1. _Normalize_  data by eliminating redundancy (see [BCNF](https://en.wikipedia.org/wiki/Boyce%E2%80%93Codd_normal_form)) 
+1. _Foreign Keys_  "point back" to a related table by ID 
+
+
+---
+
+<br>
+<br>
+<br>
+
+# Structured Query Language (SQL)
+
+---
+
+## About SQL
+1. SQL is a programming language to describe tables, attributes, and constraints 
+1. Many databases support SQL (Oracle, MySQL, SQLServer, PostgreSQL, SQLite, ...) 
+1. The syntax is arcane but SQL is everywhere in commercial SW dev 
+
+---
+
+## Creating Tables
+
+<br>
+
+```sql
+CREATE TABLE customers (
+    id integer PRIMARY KEY,
+    name text
+);
+```
+
+---
+
+## Inserting rows
+
+<br>
+
+```sql
+INSERT INTO customers(name) values("Widgets Inc");
+```
+
+What about the `id`?
+
+---
+
+## Updating (modifying) rows
+
+<br>
+
+```sql
+UPDATE customers
+SET zip_code = 95070
+WHERE id = 1;
+```
+
+---
+
+## Querying (searching)
+
+<br>
+
+```sql
+SELECT * from customers;
+
+SELECT * from customers WHERE id = 1;
+```
+
+---
+
+## Deleting rows and tables
+
+<br>
+
+```sql
+DELETE FROM customers WHERE id = 1;
+
+DROP TABLE customers;
+```
+
+SQL Injection
+
+---
+
+## Foreign Keys
+
+```sql
+CREATE TABLE invoices (
+    id integer PRIMARY KEY,
+    amount real,
+    customer_id integer,
+    FOREIGN KEY(customer_id) REFERENCES customers(id)
+);
+
+SELECT * FROM invoices WHERE customer_id = 1;
+```
+
+---
+
+## SQLite tutorials
+
+[https://www.sqlitetutorial.net/](https://www.sqlitetutorial.net/)
