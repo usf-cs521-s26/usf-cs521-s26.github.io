@@ -1,6 +1,6 @@
 ---
 layout: assignment
-due: 2026-04-28 23:59:59 -0700
+due: 2026-04-29 23:59:59 -0700
 permalink: assignments/project05.html
 title: Project05 - HTTP Server
 github_url: https://classroom.github.com/a/GhqufCOP
