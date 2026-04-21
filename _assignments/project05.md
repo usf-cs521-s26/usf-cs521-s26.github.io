@@ -1,10 +1,10 @@
 ---
 layout: assignment
-due: 
+due: 2026-04-28 23:59:59 -0700
 permalink: assignments/project05.html
 title: Project05 - HTTP Server
-github_url: 
-published: false
+github_url: https://classroom.github.com/a/GhqufCOP
+published: true
 ---
 
 {% assign img_base = site.url | append: site.baseurl | append: "/assets/img" %}
@@ -16,18 +16,18 @@ published: false
 
 ## Example output
 
-1. You need to set up SSH port forwarding. If you were using port 9000 (use the same port number you used for lab06 and lab07) in a container, then open a second terminal and run the following command to get your container's IP address
+1. You need to set up SSH port forwarding. If you were using port 8000 (use the same port number you used for lab06 and lab07) in a container, then open a second terminal and run the following command to get your container's IP address
 	```sh
 	$ clabip
 	172.17.0.22
 	```
-1. Run a terminal on your laptop and run this command so that your web browser's connection to `localhost` on port 9000 will be forwarded to your container on port 9000.
+1. Run a terminal on your laptop and run this command so that your web browser's connection to `localhost` on port 8000 will be forwarded to your container on port 8000.
 
 	```sh
 	$ ssh -J stargate -L 8000:172.17.0.22:8000 medusa
 	```
 
-1. Go to localhost:9000 on your web browser. Your HTTP server running in your container should respond. For the content of your server, use the content of CS521 website ![as shown below]({{ img_base }}/project05_screenshot.png).
+1. Go to localhost:8000 on your web browser. Your HTTP server running in your container should respond. For the content of your server, use the content of CS521 website ![as shown below]({{ img_base }}/project05_screenshot.png).
 
 1. Click on the links - the contents must match what you would see on the official CS521 website. 
 
@@ -36,11 +36,11 @@ published: false
 1. Download the content of cs521 course website to serve from your own web server. To scrape the site, run
 
 	```sh
-	$ wget --recursive --page-requisites --convert-links cs521-s24.github.io
+	$ wget --recursive --page-requisites --convert-links cs521-s26.github.io
 	```
 1. If you wish to store the content in `www` directory, move the contents as follows.
 	```sh
-	$ mv cs251-s24.github.io www
+	$ mv cs251-s26.github.io www
 	```
 1. You may use `fseek()` and `ftell()` function to get the size of the file for the `Content-Length: ` part. The following line puts the file position indicator for the stream pointed to by `stream`to the end of the file, and `ftell(stream)` returns the current offset (position) in bytes. 
 
@@ -74,23 +74,23 @@ published: false
 
 ## Rubric
 
-1. We will use the following rubric during peer-grading session.
+1. We will use the following rubric during code review.
 	1. `path` support (40 pts): 
 		1. The contents served from the HTTP server match what are served from the official CS521 website. 
 	1. using non-blocking IO and `poll` (40 pts): 
 		1. check the source code for the correct use of `ioctl`
 		1. check the source code for the correct use of `poll` 
 	1. Defensive coding (10 pts):
-		1. Checking for memory and I/O errors (3 pts)
-		1. No unbounded memory copies (3 pts)
-		1. No memory leaks (4 pts)
+		1. Checking for memory and I/O errors
+		1. No unbounded memory copies
+		1. No memory leaks
 	1. Style (10 pts): 
-		1. Consistent naming and indentation (2 pts)
-		1. Well-designed functions	(2 pts) 
-		1. Helpful comments (2 pts)	
-		1. No dead (commented-out) code or unnecessarily complex code (2 pts)	
-		1. No build products or output dictionary files in the repo (2 pts)
+		1. Consistent naming and indentation
+		1. Well-designed functions
+		1. Helpful comments
+		1. No dead (commented-out) code or unnecessarily complex code
+		1. No build products in the repo
 	1. Extra credit (5 pts)
 		1. After you have completed the project using `poll()`, refactor your server to use `fork()` rather than `poll()`
 		1. Add a second build target to your `Makefile` to make the `fork()` version of your server
-		1. Explain the `fork()` version of your server to your grading partner
+		1. Explain the `fork()` version of your server
