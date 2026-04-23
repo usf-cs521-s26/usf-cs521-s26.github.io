@@ -91,6 +91,6 @@ published: true
 		1. No dead (commented-out) code or unnecessarily complex code
 		1. No build products in the repo
 	1. Extra credit (5 pts)
-		1. After you have completed the project using `poll()`, refactor your server to use `fork()` rather than `poll()`
-		1. Add a second build target to your `Makefile` to make the `fork()` version of your server
-		1. Explain the `fork()` version of your server
+		1. After you have completed the project using `poll()`, refactor your server to use `pthread` rather than `poll()`
+		1. Add a second build target to your `Makefile` to make the threaded version of your server
+		1. Explain the multithreaded version of your server
