@@ -65,12 +65,8 @@ published: true
 
 ## Grading process
 
-1. Project05 will be interactively graded by peers on Thu, May 14th, the last class day of the semester using the rubric below. 
-	1. Everyone will submit a google form with the scores. The TA will review for an error in grading and enter the scores in Canvas.
-	1. An absence during the peer-grading session will result in 0 for project05. 
-	1. Note that there is no resubmission for Project05 style. The peer-grading session happens on the last class day, so there is no time for resubmission and regrading. 
-    1. Grading meetings must use the clab terminal environment, not local IDEs on your laptop or web pages on github.com
-    1. To ensure that everyone has the same deadline, grading meetings will start with `grade clone -p project05 -s your_github_id -d 2024-05-15` to get a clean repo
+  1. Grading meetings must use the clab terminal environment, not local IDEs on your laptop or web pages on github.com
+  1. To ensure that everyone has the same deadline, grading meetings will start with `grade clone -p project05 -s your_github_id -d 2024-05-30` to get a clean repo
 
 ## Rubric
 
