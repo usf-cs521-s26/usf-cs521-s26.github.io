@@ -18,9 +18,17 @@ published: true
 
 1. You need to set up SSH port forwarding. If you were using port 8000 (use the same port number you used for lab06 and lab07) in a container, then open a second terminal and run the following command to get your container's IP address
 	```sh
-	$ clabip
-	172.17.0.22
-	```
+	$ ip a
+    1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+        link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+        inet 127.0.0.1/8 scope host lo
+        valid_lft forever preferred_lft forever
+        inet6 ::1/128 scope host
+        valid_lft forever preferred_lft forever
+    2: eth0@if107: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+        link/ether ea:bf:55:6e:a2:dd brd ff:ff:ff:ff:ff:ff link-netnsid 0
+        inet 172.17.0.3/16 brd 172.17.255.255 scope global eth0
+        valid_lft forever preferred_lft forever	```
 1. Run a terminal on your laptop and run this command so that your web browser's connection to `localhost` on port 8000 will be forwarded to your container on port 8000.
 
 	```sh
@@ -36,7 +44,7 @@ published: true
 1. Download the content of cs521 course website to serve from your own web server. To scrape the site, run
 
 	```sh
-	$ wget --recursive --page-requisites --convert-links cs521-s26.github.io
+	$ wget --recursive --page-requisites --convert-links usf-cs521-s26.github.io
 	```
 1. If you wish to store the content in `www` directory, move the contents as follows.
 	```sh
