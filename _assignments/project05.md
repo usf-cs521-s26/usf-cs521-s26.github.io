@@ -78,7 +78,8 @@ published: true
 
 ## Rubric
 
-1. We will use the following rubric during code review.
+1. 85 pts: Turn in LLM generated code which meets the requirement below
+2. Up to 100 pts: Sign up for a code review. We will use the following rubric during code review.
 	1. `path` support (40 pts): 
 		1. The contents served from the HTTP server match what are served from the official CS521 website. 
 	1. using non-blocking IO and `poll` (40 pts): 
