@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -21,10 +21,10 @@
 title: CS 521 - Systems Programming
 author: Phil Peterson
 email: phpeterson@usfca.edu
-baseurl: ""  # the subpath of your site, e.g. /blog
-favicon: favicon.ico  # Icon displayed in the tab
+baseurl: "" # the subpath of your site, e.g. /blog
+favicon: favicon.ico # Icon displayed in the tab
 due_date_format: "%a, %b %-d, %Y at %I:%M %p" # Thu, Jan 27, 2022 at 11:59 PM
-future: true  # allow posts with future dates
+future: true # allow posts with future dates
 
 # Build settings
 remote_theme: jekyll/minima@7a326eb
@@ -47,6 +47,7 @@ collections:
     permalink: /:collection/:name
 
 ordered-categories:
+  - "Databases"
   - "Networking"
   - "Programming Languages"
   - "File I/O"

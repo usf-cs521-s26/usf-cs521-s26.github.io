@@ -104,15 +104,15 @@ proposed by [Ted Codd](https://en.wikipedia.org/wiki/Edgar_F._Codd)
 ## Object-oriented view
 
 ```go
-type Product struct {
-    product_name string
-    unit_price float
-}
+struct product_t {
+    char name[256];
+    float price;
+};
 
-type Manufacturer struct {
-    mfg_name string
-    products []Product
-}
+struct manufacturer_t  {
+    char mfg_name[256];
+    product_t *products[256];
+};
 ```
 
 ---
