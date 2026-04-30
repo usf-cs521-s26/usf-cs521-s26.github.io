@@ -1,15 +1,16 @@
 ---
 layout: assignment
-due: 
+due: 2026-05-05 23:59:59
 permalink: assignments/lab08.html
 title: lab08 - SQL Databases
-github_url: 
+github_url: https://classroom.github.com/a/YLJCzpek
 published: true
 ---
 
 ## Requirements
 
 1. For this lab you will use the SQLite developer tools for C to `CREATE` a table `INSERT` at least five rows and `SELECT` to print the table rows
+1. You may choose the theme of the table (i.e. cars, basketball players, invoices, ...)
 1. When you execute a SQL `SELECT` you will provide a callback function which will be called once per row
 1. You can use your resizable array from project03 to pass the values out of the callback
 
